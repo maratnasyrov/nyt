@@ -36,9 +36,8 @@ class Router {
         }
     }
 
-    /**
-    *  Возвращаем строку запроса
-    **/
+
+    // Возвращаем строку запроса
     private function getURL() {
         if (!empty($_SERVER['REQUEST_URI'])) {
             $url = trim($_SERVER['REQUEST_URI'], '/');
