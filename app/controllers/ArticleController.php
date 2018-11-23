@@ -7,6 +7,8 @@ class ArticleController {
     public function search() {
         $articles = Article::getArticles();
 
+        echo "<pre>";
         print_r($articles);
+        echo "</pre>";
     }
 }

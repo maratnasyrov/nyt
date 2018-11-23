@@ -36,7 +36,6 @@ class Router {
         }
     }
 
-
     // Возвращаем строку запроса
     private function getURL() {
         if (!empty($_SERVER['REQUEST_URI'])) {

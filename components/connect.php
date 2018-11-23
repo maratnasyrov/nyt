@@ -9,8 +9,8 @@ class Connect {
           "q" => "russia",
           // "fq" => "",
           "begin_date" => "20181101",
-          "end_date" => "20181123"
-          // "sort" => "",
+          "end_date" => "20181123",
+          "sort" => "newest"
           // "fl" => "",
           // "hl" => "",
           // "page" => "",
