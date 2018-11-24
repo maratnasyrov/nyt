@@ -2,8 +2,8 @@
 
 class Article {
     // Выводим массив articles с результатом поиска
-    public static function getArticles() {
-        $searchResult = Connect::getData();
+    public static function getArticles($params) {
+        $searchResult = Connect::getData($params);
 
         $articles = [];
 
@@ -21,7 +21,8 @@ class Article {
         return $articles;
     }
 
-    // Ищем изображение с наибольшей высотой, если оно есть, либо ничего возвращаем, если нет
+    // Ищем изображение с наибольшей высотой, если оно есть, либо ничего не возвращаем, если нет
+    // Возвращаем ссылку на изображение
     private static function getImage($imageArray) {
         $weightmax = 0;
         $imageUrl = "";

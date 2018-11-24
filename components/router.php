@@ -3,6 +3,7 @@
 class Router {
     private $routes;
 
+    // подключаем файл с маршрутами
     public function __construct() {
         $routesPath = ROOT.'/config/routes.php';
         $this->routes = include "$routesPath";
@@ -13,12 +14,12 @@ class Router {
 
         foreach ($this->routes as $route => $path) {
             if ($route == $url) {
-                $controller_segments = explode('/', $path);
+                $controllerSegments = explode('/', $path);
 
-                $controllerName = array_shift($controller_segments).'Controller';
+                $controllerName = array_shift($controllerSegments).'Controller';
                 $controllerName = ucfirst($controllerName);
 
-                $actionName = ucfirst(array_shift($controller_segments));
+                $actionName = ucfirst(array_shift($controllerSegments));
 
                 // Подключаю файл класса контроллера
                 $controllerFile = ROOT.'/app/controllers/'.$controllerName.'.php';
@@ -29,9 +30,6 @@ class Router {
                 if ($result != null) {
                     break;
                 }
-
-            } else {
-                echo "404 Not found";
             }
         }
     }
