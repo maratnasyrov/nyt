@@ -3,10 +3,10 @@
     <head>
         <meta charset="utf-8">
         <title></title>
+        <link rel="stylesheet" href="/app/assets/css/app.css">
+        <link rel="stylesheet" href="/app/assets/css/article.css">
     </head>
     <body>
-        <h2>Главная страница</h2>
-
         <?php ($content != false) ? include_once($content) : print_r("Страница не создана"); ?>
     </body>
 </html>

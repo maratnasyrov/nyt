@@ -15,7 +15,8 @@ class Article {
             $articles[$i]['main'] = $docsArray[$i]['headline']['main'];
             (array_key_exists('section_name', $docsArray[$i])) ? $articles[$i]['sectionName'] = $docsArray[$i]['section_name'] : "";
             $articles[$i]['imageUrl'] = Article::getImage($docsArray[$i]['multimedia']);
-            $articles[$i]['pubDate'] = $docsArray[$i]['pub_date'];
+            $date = new DateTime($docsArray[$i]['pub_date']);
+            $articles[$i]['pubDate'] = $date->format('H:i:s d/m/Y ');
         }
 
         return $articles;
@@ -39,6 +40,10 @@ class Article {
             }
         }
 
-        return "http://static01.nyt.com/".$imageUrl;
+        if (!empty($imageUrl)) {
+            $imageUrl = "http://static01.nyt.com/".$imageUrl;
+        }
+
+        return $imageUrl;
     }
 }

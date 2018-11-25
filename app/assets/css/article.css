@@ -1,0 +1,77 @@
+div.search-result {
+    margin: auto;
+    width: 800px;
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
+}
+
+div.search-result div.article-part {
+    border-bottom: 1px solid #e7e8ec;
+    padding: 1rem;
+    height: 150px;
+}
+
+div.search-result div.article-part:last-child {
+    border-bottom: 0;
+}
+
+div.search-result div.article-part div.main-block {
+    float: left;
+    width: 600px;
+}
+
+div.search-result div.article-part div.main-block div.title a{
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    color: #000;
+    letter-spacing: -0.5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+div.search-result div.article-part div.main-block div.title a:hover{
+    text-decoration: underline;
+}
+
+div.search-result div.article-part div.main-block div.snippet{
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    font-family: sans-serif;
+    color: #333;
+}
+
+div.search-result div.article-part div.main-block div.section-name {
+    color: #222;
+    font-family: sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+div.search-result div.article-part div.main-block div.pub-date {
+    color: #999;
+    font-family: sans-serif;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+
+div.search-result div.article-part div.main-block div.rubric-label-dot {
+    margin: 0.1rem 0.3rem 0.3rem 0;
+    float: left;
+    background-color: #222;
+    top: 2px;
+    left: 1px;
+    width: 8px;
+    height: 8px;
+    content: '';
+    -webkit-transform: scale(.95);
+    transform: scale(.95);
+    border-radius: 50%;
+}
+
+div.search-result div.article-part img.preview{
+    width: 120px;
+    float: right;
+}

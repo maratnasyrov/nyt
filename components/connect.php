@@ -8,8 +8,8 @@ class Connect {
           "api-key" => "b8ccf1d4c00b42518b56e7a2abab8361",
           "q" => $params["q"],
           // "fq" => $params["fq"],
-          "begin_date" => $params["begin_date"],
-          "end_date" => $params["end_date"],
+          // "begin_date" => $params["begin_date"],
+          // "end_date" => $params["end_date"],
           "sort" => $params["sort"]
           // "fl" => $params["fl"],
           // "hl" => $params["hl"],

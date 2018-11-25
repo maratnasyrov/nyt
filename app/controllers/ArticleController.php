@@ -8,8 +8,8 @@ class ArticleController {
         $params = [
             "q" => "russia",
             // "fq" => "",
-            "begin_date" => "20181101",
-            "end_date" => "20181122",
+            // "begin_date" => "20181101",
+            // "end_date" => "20181122",
             "sort" => "newest"
             // "fl" => "",
             // "hl" => "",
