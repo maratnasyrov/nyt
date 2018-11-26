@@ -1,28 +1,20 @@
-<div class="search-result">
-    <?php foreach ($articles as $article => $value): ?>
-        <div class="article-part">
-            <div class="main-block">
-                <?php if (!empty($value['sectionName'])): ?>
-                    <div class="rubric-label-dot"></div>
-                    <div class="section-name">
-                        <?php echo $value['sectionName']; ?>
-                    </div>
-                <?php endif; ?>
-                <div class="title">
-                    <a href="<?php echo $value['webUrl'] ?>"><?php echo $value['main'] ?></a>
-                </div>
 
-                <div class="snippet">
-                    <?php echo $value['snippet'] ?>
-                </div>
+<form id="article-search-form" method="POST" action="" class="search-form">
+    <input type="text" name="q" placeholder="SEARCH">
+    <select class="sort" name="sort">
+        <option value="best">Sort by Relevance</option>
+        <option value="newest">Sort by Newest</option>
+        <option value="oldest">Sort by Oldest</option>
+    </select>
 
-                <div class="pub-date">
-                    <?php echo $value['pubDate'] ?>
-                </div>
-            </div>
-            <?php if (!empty($value['imageUrl'])): ?>
-                <img src="<?php echo $value['imageUrl'] ?>" class="preview" align="middle">
-            <?php endif; ?>
-        </div>
-    <?php endforeach; ?>
+    <select class="" name="page">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </select>
+    <button type="submit" name="SEARCH">SEARCH</button>
+</form>
+
+<div id="search-result" class="search-result">
 </div>

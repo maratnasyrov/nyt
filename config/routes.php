@@ -1,8 +1,9 @@
 <?php
 
 $routes = [
-    "search" => "article/search",
-    "show" => "article/show"
+    "show" => "article/show",
+    "index" => "article/index",
+    "search" => "article/search"
 ];
 
 return $routes;

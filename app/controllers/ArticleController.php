@@ -4,30 +4,34 @@ include_once ROOT.'/app/models/article.php';
 
 class ArticleController {
 
+    public function index() {
+        $view = new View();
+
+        $view->show_page('articles/index', []);
+    }
+
     public function search() {
+        $view = new View();
+
         $params = [
-            "q" => "russia",
+            "q" => $_POST['q'],
             // "fq" => "",
             // "begin_date" => "20181101",
             // "end_date" => "20181122",
-            "sort" => "newest"
-            // "fl" => "",
-            // "hl" => "",
-            // "page" => "",
+            "sort" => $_POST['sort'],
+            "page" => $_POST['page']
             // "facet_field" => "",
             // "facet_filter" => ""
         ];
 
         $articles = Article::getArticles($params);
 
-        new View('articles/index', ["articles" => $articles]);
-    }
-
-    public function index() {
-
+        return $view->render_page_part('articles/search', ["articles" => $articles, "query" => $_POST['q']]);
     }
 
     public function show() {
-        new View('articles/show', []);
+        $view = new View();
+
+        $view->show_page('articles/show', []);
     }
 }

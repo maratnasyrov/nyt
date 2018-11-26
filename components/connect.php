@@ -10,10 +10,8 @@ class Connect {
           // "fq" => $params["fq"],
           // "begin_date" => $params["begin_date"],
           // "end_date" => $params["end_date"],
-          "sort" => $params["sort"]
-          // "fl" => $params["fl"],
-          // "hl" => $params["hl"],
-          // "page" => $params["page"],
+          "sort" => $params["sort"],
+          "page" => $params["page"]
           // "facet_field" => $params["facet_field"],
           // "facet_filter" => $params["facet_filter"]
         );
