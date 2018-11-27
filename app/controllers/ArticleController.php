@@ -7,7 +7,7 @@ class ArticleController {
     public function index() {
         $view = new View();
 
-        $view->show_page('articles/index', []);
+        $view->show_page('articles/index');
     }
 
     public function search() {
@@ -15,23 +15,20 @@ class ArticleController {
 
         $params = [
             "q" => $_POST['q'],
-            // "fq" => "",
-            // "begin_date" => "20181101",
-            // "end_date" => "20181122",
             "sort" => $_POST['sort'],
-            "page" => $_POST['page']
-            // "facet_field" => "",
-            // "facet_filter" => ""
+            "page" => $_POST['page'],
+            "begin_date" => $_POST["begin_date"],
+            "end_date" => $_POST["end_date"],
         ];
 
         $articles = Article::getArticles($params);
 
-        return $view->render_page_part('articles/search', ["articles" => $articles, "query" => $_POST['q']]);
+        return $view->render_page_part('articles/search', ["articles" => $articles, "query" => $_POST['q'], "index" => $_POST['page']]);
     }
 
     public function show() {
         $view = new View();
 
-        $view->show_page('articles/show', []);
+        $view->show_page('articles/show');
     }
 }

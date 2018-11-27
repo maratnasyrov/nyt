@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <title>NYT API Search</title>
         <link rel="stylesheet" href="/app/assets/css/app.css">
         <link rel="stylesheet" href="/app/assets/css/article.css">
 
