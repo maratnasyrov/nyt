@@ -16,9 +16,11 @@ class Connect {
         $endDate = $params['end_date'];
 
         if (!empty($beginDate)) {
+            $beginDate = Connect::changeDataStr($beginDate);
             $query = array_merge($query, ["begin_date" => $beginDate]);
         }
         if (!empty($endDate)) {
+            $endDate = Connect::changeDataStr($endDate);
             $query = array_merge($query, ["end_date" => $endDate]);
         }
 
@@ -28,5 +30,15 @@ class Connect {
         $result = json_decode(curl_exec($curl), TRUE);
 
         return $result;
+    }
+
+    public static function changeDataStr($date) {
+        $dateSegments_dot = explode(".", $date);
+
+        $day = array_shift($dateSegments_dot);
+        $month = array_shift($dateSegments_dot);
+        $year = array_shift($dateSegments_dot);
+
+        return "$year$month$day";
     }
 }

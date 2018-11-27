@@ -14,7 +14,7 @@
                     </div>
                 <?php endif; ?>
                 <div class="title">
-                    <a href="<?php echo $value['webUrl'] ?>"><?php echo $value['main'] ?></a>
+                    <a href="<?php echo $value['webUrl'] ?>" target="_blank"><?php echo $value['main'] ?></a>
                 </div>
 
                 <div class="snippet">

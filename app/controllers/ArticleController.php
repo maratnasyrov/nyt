@@ -25,10 +25,4 @@ class ArticleController {
 
         return $view->render_page_part('articles/search', ["articles" => $articles, "query" => $_POST['q'], "index" => $_POST['page']]);
     }
-
-    public function show() {
-        $view = new View();
-
-        $view->show_page('articles/show');
-    }
 }

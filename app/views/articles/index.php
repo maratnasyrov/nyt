@@ -7,8 +7,11 @@
             <option value="newest">Sort by Newest</option>
             <option value="oldest">Sort by Oldest</option>
         </select>
-        <input type="text" name="begin_date" placeholder="START DATE" class="date">
-        <input type="text" name="end_date" placeholder="END DATE" class="date">
+
+        <input type="text" name="begin_date" placeholder="DD.MM.YYYY" class="date-start">
+        <label for="end_date">to</label>
+        <input type="text" name="end_date" placeholder="DD.MM.YYYY" class="date-end">
+
 
         <input id="page-index" type="text" name="page" value="0" hidden>
 

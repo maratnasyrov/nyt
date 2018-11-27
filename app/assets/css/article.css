@@ -20,11 +20,24 @@ div.search-part form.search-form input.q {
     border-radius: 2rem;
 }
 
-div.search-part form.search-form input.date {
+div.search-part form.search-form label {
+    color: #353434;
+}
+
+div.search-part form.search-form input.date-start, div.search-part form.search-form input.date-end {
     padding: .5rem .5rem .5rem 1rem;
     border: 1px solid #e7e8ec;
-    width: 100px;
-    border-radius: 2rem;
+    width: 90px;
+}
+
+div.search-part form.search-form input.date-start {
+    border-bottom-left-radius: 2rem;
+    border-top-left-radius: 2rem;
+}
+
+div.search-part form.search-form input.date-end {
+    border-bottom-right-radius: 2rem;
+    border-top-right-radius: 2rem;
 }
 
 div.search-part form.search-form input:focus, div.search-part form.search-form select:focus {
